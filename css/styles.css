@@ -1,0 +1,55 @@
+/* Tema Dark estilo Discord - ALQUIPC */
+:root{
+  --bg-900:#0b0d12; --bg-800:#0f1117; --bg-700:#151923;
+  --txt-100:#f2f3f5; --txt-300:#c9ced6; --primary:#5865F2; --muted:#99a1b3;
+  --radius:16px; --shadow: 0 8px 20px rgba(0,0,0,.4);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg-900); color:var(--txt-100)}
+
+.app{display:flex; min-height:100vh}
+
+/* Sidebar */
+.sidebar{width:260px; background:linear-gradient(180deg,var(--bg-800),var(--bg-700)); padding:18px; display:flex; flex-direction:column; gap:18px; border-right:1px solid rgba(255,255,255,.04)}
+.brand{font-weight:800; color:var(--primary); font-size:20px; text-align:center}
+.nav-link{display:block; padding:10px 12px; color:var(--txt-300); text-decoration:none; border-radius:12px; margin:6px 0}
+.nav-link:hover{background:rgba(255,255,255,.03); color:var(--txt-100)}
+.nav-link.active{background:rgba(88,101,242,.16); color:#fff}
+
+/* Main */
+.main{flex:1; display:flex; flex-direction:column}
+.topbar{height:64px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; background:var(--bg-800); border-bottom:1px solid rgba(255,255,255,.03)}
+.topbar h1{margin:0; font-size:18px; font-weight:700}
+.top-actions .btn{margin-left:8px}
+
+.content{padding:22px;}
+
+/* Cards & layout */
+.card{background:var(--bg-800); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,.04)}
+.grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:20px}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}.sidebar{width:86px} .brand{display:none} .nav-link{padding:10px}}
+
+/* Forms */
+input, select, textarea{width:100%; padding:10px 12px; background:var(--bg-700); border-radius:10px; border:1px solid rgba(255,255,255,.04); color:var(--txt-100); outline:none}
+input:focus, select:focus{box-shadow:0 0 0 6px rgba(88,101,242,.08); border-color:var(--primary)}
+label{font-size:13px; color:var(--txt-300)}
+
+/* Buttons */
+.btn{padding:8px 12px; border-radius:10px; background:transparent; color:var(--txt-100); border:1px solid rgba(255,255,255,.06); cursor:pointer; font-weight:600}
+.btn-primary{background:var(--primary); border-color:var(--primary); color:white}
+.btn-ghost{background:transparent}
+
+/* Receipt */
+.receipt{background:linear-gradient(180deg,var(--bg-700),rgba(0,0,0,.2)); padding:12px; border-radius:10px; border:1px dashed rgba(255,255,255,.04)}
+.receipt .row{display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed rgba(255,255,255,.03)}
+.receipt .row:last-child{border-bottom:0}
+.table{width:100%; border-collapse:collapse; font-size:14px}
+.table th, .table td{padding:8px; text-align:left; border-bottom:1px solid rgba(255,255,255,.03)}
+
+/* Utilities */
+.hint{color:var(--muted); font-size:13px}
+.actions{display:flex; gap:8px; margin-top:10px}
+.form-actions{display:flex; gap:8px; margin-top:12px}
+.cta{display:flex; gap:10px; margin-top:12px}
+.small{font-size:13px; color:var(--muted)}

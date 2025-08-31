@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ALQUIPC — Historial</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="historial">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">ALQUIPC</div>
+      <nav>
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="facturacion.html" class="nav-link">Facturación</a>
+        <a href="historial.html" class="nav-link active">Historial</a>
+        <a href="clientes.html" class="nav-link">Clientes</a>
+        <a href="ayuda.html" class="nav-link">Ayuda</a>
+      </nav>
+      <div class="user">Operadora • ID-ALQ</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1>Historial de facturas</h1>
+        <div class="top-actions">
+          <button id="btnClearAll" class="btn btn-ghost">Borrar todo</button>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="card">
+          <h3>Facturas guardadas</h3>
+          <div id="tblContainer"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="js/app.js"></script>
+</body>
+</html>
