@@ -1,4 +1,5 @@
 // ALQUIPC - app.js (multi-page)
+
 // Constantes de negocio
 const PRECIO_DIA_EQUIPO = 35000;
 const AJUSTES_UBICACION = {
@@ -31,7 +32,7 @@ function calcularFactura({equipos,diasIniciales,diasAdicionales,ubicacion}){
   const factorUbic = AJUSTES_UBICACION[ubicacion] ?? 1;
   const montoUbic = Math.round(subtotalBase * (factorUbic - 1));
   const subtotalConUb = subtotalBase + montoUbic;
-  const descuentoPct = 0.02 * Number(diasAdicionales);
+  const descuentoPct = Math.min(0.02 * Number(diasAdicionales), 0.20);
   const montoDescuento = Math.round(subtotalConUb * descuentoPct);
   const total = Math.max(0, Math.round(subtotalConUb - montoDescuento));
   return {diasTotales, subtotalBase, montoUbic, descuentoPct, montoDescuento, total};
